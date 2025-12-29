@@ -1,0 +1,353 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.6/schema.json
+cv:
+  name: Benjamin Coveler
+  headline:
+  location:
+  email: benjamin.coveler25@imperial.ac.uk
+  photo:
+  phone: +1-832-258-9790
+  website:
+  social_networks:
+    - network: LinkedIn
+      username: benjamin-coveler
+  custom_connections:
+  sections:
+    education:
+      - institution: Imperial College London
+        area: Aeronautical Engineering
+        degree: PhD
+        date:
+        start_date: 2026
+        end_date: 2030
+        location: London, UK
+        summary:
+        highlights:
+          - '**Topic:** Aero-Thermo-Structural Simulation and Optimisation of Mechanical Interfaces in Hypersonic Vehicles'
+          - '**Supervisors:** Professor Matthew Santer, Dr Paul Bruce'
+      - institution: Northwestern University
+        area: Mechanical Engineering
+        degree: MS
+        date:
+        start_date: 2024
+        end_date: 2025
+        location: Evanston, IL, USA
+        summary:
+        highlights:
+          - "**Thesis:** *Enhancing Targeted Reconstruction Methods for Supersonic Flow Simulations*"
+          - '**Defense Committee:** Dr Jeremy Keys (chair), Professor Gregory Wagner, Professor Neelesh Patankar, Professor Seth Lichter'
+          - '**Selected Coursework:** Turbulence Modeling, Propulsion and Supersonic Flows, Applied CFD, High-Performance Computing'
+      - institution: Northwestern University
+        area: Mechanical Engineering
+        degree: BS
+        date:
+        start_date: 2021
+        end_date: 2025
+        location: Evanston, IL, USA
+        summary:
+        highlights:
+          - '**Selected Coursework:** Fluid Mechanics, Heat Transfer, Engineering Thermodynamics, Statistical Mechanics, Materials Science, Design of Mechanical Elements'
+          - "**Honors:** Dean's List with High Honors 2022-2025, Pi Tau Sigma Mechanical Engineering Honor Society"
+    experience:
+      - company: Intuitive Machines / NASA JSC
+        position: Assembly, Integration, and Testing Intern
+        date:
+        start_date: 2024-06
+        end_date: 2024-09
+        location: Houston, TX, USA
+        summary:
+        highlights:
+          - Installed and tested avionics, navigation electronics, and composite panels for IM-2 "Athena" lunar landing mission
+          - Designed and implemented thermal protection systems on flight hardware
+          - Developed, hot-fired, and installed VR900 main engine module
+      - company: Intuitive Machines / NASA JSC
+        position: Engineering Intern
+        date:
+        start_date: 2022-06
+        end_date: 2023-09
+        location: Houston, TX, USA
+        summary:
+        highlights:
+          - Implemented Core Flight Software modules in ISO C for star tracker and inertial navigation systems
+          - Designed and optimised cryogenic engine nozzle geometry for lunar lander main propulsion system
+          - Optimised reacting flow simulations with NASA proprietary codebases using NVIDIA CUDA and PETSc libraries
+          - Designs landed on Moon in February 2024 and March 2025
+      - company: Northwestern Formula Racing
+        position: Aerodynamics Engineer
+        date:
+        start_date: 2021-09
+        end_date: 2025-06
+        location: Evanston, IL, USA
+        summary:
+        highlights:
+          - Optimised and manufactured carbon fibre body panel and aerokit design for Formula SAE vehicle
+          - Conducted GPU-accelerated CFD simulations and smoke-based physical testing to enhance downforce
+          - Increased steady-state downforce in dynamic cornering by 18% while reducing drag by 12%
+          - Competed in all static and dynamic events at FSAE Michigan 2025
+      - company: Northwestern Space Technology and Rocketry Society
+        position: CFD Engineer
+        date:
+        start_date: 2024-09
+        end_date: 2025-06
+        location: Evanston, IL, USA
+        summary:
+        highlights:
+          - Designed and implemented active aerodynamic control surfaces for high-power rockets to enhance stability and target altitude precision by 20%
+          - Validated designs with wind tunnel tests, achieving 6x vehicle drag increase at Mach 0.6 with minimal deflection
+          - Team placed top-10 nationally in 2025 NASA University Student Launch Initiative
+      - company: Northwestern University
+        position: Rapid Prototyping Lab Teaching Assistant
+        date:
+        start_date: 2025-01
+        end_date: 2025-06
+        location: Evanston, IL, USA
+        summary:
+        highlights:
+          - Operated and maintained Stratasys FDM/Polyjet, Formlabs SLS, and Markforged fibre-reinforced additive manufacturing systems
+          - Lectured on CAD design, 3D printing, and CNC machining techniques with Siemens NX
+          - Implemented and taught practical CNC milling modules with wax and aluminium for mechanical engineering curriculum
+      - company: Northwestern University
+        position: Capstone Project Manager (Drone Cooperation)
+        date:
+        start_date: 2024-01
+        end_date: 2024-06
+        location: Evanston, IL, USA
+        summary:
+        highlights:
+          - Led team of 8 engineers developing fully-autonomous drone cooperation prototype for search and rescue operations
+          - Implemented optical flow and SLAM algorithms with Python and OpenCV for inter-drone localization
+          - Achieved autonomous operation in GPS-denied, inertial/visual scenarios
+    projects:
+      - name: "Master's Thesis: Supersonic Flow Reconstruction"
+        date:
+        start_date: 2024-09
+        end_date: 2025-05
+        location: Evanston, IL, USA
+        summary:
+        highlights:
+          - Developed enhanced targeted flux reconstruction method for compressible flow simulations, focusing on discontinuity capture and numerical stability
+          - Implemented GPU-accelerated algorithms in CUDA Fortran 2003 for *n*-dimensional problems with arbitrary meshes and geometries
+          - Improved simulation speed by 14% and warp efficiency by 10% via optimised kernel design
+      - name: "Combustion and Reacting Flows"
+        date:
+        start_date: 2024-01
+        end_date: 2024-06
+        location: Houston, TX, USA
+        summary:
+        highlights:
+          - Implemented methane combustion kinetics into GPU-accelerated compressible flow simulations for liquid CH4 rocket nozzle design
+          - Validated against experimental and Ansys/Chemkin data with 53 species and 325 reactions
+          - Used insights to improve NASA JSC in-house reacting flow solver stability
+      - name: "Turbulence Modelling"
+        date:
+        start_date: 2024-08
+        end_date: 2025-04
+        location: Evanston, IL, USA
+        summary:
+        highlights:
+          - Developed GPU-accelerated CFD solver for turbulence research with DNS and Smagorinsky-Lilly LES models
+          - Scales efficiently to 16+ NUMA nodes on Quest HPC cluster at Northwestern
+          - Provided framework for GPU-accelerated external flow turbulence integration in thesis research
+    skills:
+      - label: Technical Project Leadership
+        details: Stakeholder communication, conflict resolution, decision-making time estimation
+      - label: Computer Aided Design Software
+        details: Siemens NX/Unigraphics, SolidWorks, Ansys/Mechanical, Ansys/Discovery
+      - label: Computational Fluid Dynamics Software
+        details: Siemens STAR-CCM+, Ansys/Fluent, OpenFOAM, custom codebases
+      - label: Programming Languages and Frameworks
+        details: C, NVIDIA CUDA C++, Fortran 2003, Nvidia CUDA Fortran, aarch64 and Intel 64 Assembly, LLVM MLIR, Python, OpenMPI/HPC-X parallelism, OpenACC and OpenMP GPU directives
+      - label: Mathematics
+        details: Linear algebra, partial differential equations, tensor calculus, calculus of variations, probability and statistical analysis for simulation inc. Monte Carlo methods, algorithms and numerical optimisation
+      - label: Machining and Fabrication
+        details: Milling, lathing, CNC, 3D printing (FDM/SLS), injection molding, carbon fibre autoclave
+      - label: Motorsports
+        details: High-performance vehicle dynamics, vehicle data analysis, GT4/GT3 race driving experience
+    awards_and_certifications:
+      - label: Eagle Scout
+        details: Earned August 2017, subsequently became one of less than 500 Boy Scouts to earn every merit badge
+      - label: Ansys Certification
+        details: Certified (associate level proficiency) to simulate heat transfer and fluid mechanics with Ansys/Fluent and Ansys/Workbench
+      - label: National Association of Rocketry
+        details: Certified (level 1 proficiency) to launch high-power rockets
+design:
+  theme: classic
+  page:
+    size: a4
+  #   top_margin: 0.7in
+  #   bottom_margin: 0.7in
+  #   left_margin: 0.7in
+  #   right_margin: 0.7in
+  #   show_footer: true
+  #   show_top_note: true
+  colors:
+    # body: rgb(0, 0, 0)
+    name: rgb(73, 44, 127) # rgb(0, 79, 144)
+    # headline: rgb(0, 79, 144)
+    connections: rgb(73, 44, 127) # rgb(0, 79, 144)
+    section_titles: rgb(73, 44, 127) # rgb(0, 79, 144)
+    links: rgb(73, 44, 127) # rgb(0, 79, 144)
+    # footer: rgb(128, 128, 128)
+    # top_note: rgb(128, 128, 128)
+  # typography:
+  #   line_spacing: 0.6em
+  #   alignment: justified
+  #   date_and_location_column_alignment: right
+  #   font_family:
+  #     body: Source Sans 3
+  #     name: Source Sans 3
+  #     headline: Source Sans 3
+  #     connections: Source Sans 3
+  #     section_titles: Source Sans 3
+  #   font_size:
+  #     body: 10pt
+  #     name: 30pt
+  #     headline: 10pt
+  #     connections: 10pt
+  #     section_titles: 1.4em
+  #   small_caps:
+  #     name: false
+  #     headline: false
+  #     connections: false
+  #     section_titles: false
+  #   bold:
+  #     name: true
+  #     headline: false
+  #     connections: false
+  #     section_titles: true
+  # links:
+  #   underline: false
+  #   show_external_link_icon: false
+  # header:
+  #   alignment: center
+  #   photo_width: 3.5cm
+  #   photo_position: left
+  #   photo_space_left: 0.4cm
+  #   photo_space_right: 0.4cm
+  #   space_below_name: 0.7cm
+  #   space_below_headline: 0.7cm
+  #   space_below_connections: 0.7cm
+  #   connections:
+  #     phone_number_format: national
+  #     hyperlink: true
+  #     show_icons: true
+  #     display_urls_instead_of_usernames: false
+  #     separator: ''
+  #     space_between_connections: 0.5cm
+  # section_titles:
+  #   type: with_partial_line
+  #   line_thickness: 0.5pt
+  #   space_above: 0.5cm
+  #   space_below: 0.3cm
+  sections:
+  #   allow_page_break: true
+  #   space_between_regular_entries: 1.2em
+  #   space_between_text_based_entries: 0.3em
+    show_time_spans_in:
+      - None
+      # - experience
+  # entries:
+  #   date_and_location_width: 4.15cm
+  #   side_space: 0.2cm
+  #   space_between_columns: 0.1cm
+  #   allow_page_break: false
+  #   short_second_row: true
+  #   summary:
+  #     space_above: 0cm
+  #     space_left: 0cm
+  #   highlights:
+  #     bullet: •
+  #     nested_bullet: •
+  #     space_left: 0.15cm
+  #     space_above: 0cm
+  #     space_between_items: 0cm
+  #     space_between_bullet_and_text: 0.5em
+  templates:
+      footer: 'PAGE_NUMBER / TOTAL_PAGES' # '*NAME -- PAGE_NUMBER/TOTAL_PAGES*'
+  #   top_note: '*LAST_UPDATED CURRENT_DATE*'
+  #   single_date: MONTH_ABBREVIATION YEAR
+  #   date_range: START_DATE – END_DATE
+  #   time_span: HOW_MANY_YEARS YEARS HOW_MANY_MONTHS MONTHS
+      one_line_entry:
+        main_column: '**LABEL:** DETAILS'
+      education_entry:
+        main_column: |-
+          **INSTITUTION**, AREA
+          SUMMARY
+          HIGHLIGHTS
+        degree_column: '**DEGREE**'
+        date_and_location_column: |-
+          **LOCATION**
+          DATE
+      normal_entry:
+        main_column: |-
+          **NAME**
+          SUMMARY
+          HIGHLIGHTS
+        date_and_location_column: |-
+          **LOCATION**
+          DATE
+      experience_entry:
+        main_column: |-
+          **COMPANY**, POSITION
+          SUMMARY
+          HIGHLIGHTS
+        date_and_location_column: |-
+          **LOCATION**
+          DATE
+      publication_entry:
+        main_column: |-
+          **TITLE**
+          SUMMARY
+          AUTHORS
+          URL (JOURNAL)
+        date_and_location_column: DATE
+locale:
+  language: english
+  # last_updated: Last updated in
+  # month: month
+  # months: months
+  # year: year
+  # years: years
+  # present: present
+  # month_abbreviations:
+  #   - Jan
+  #   - Feb
+  #   - Mar
+  #   - Apr
+  #   - May
+  #   - June
+  #   - July
+  #   - Aug
+  #   - Sept
+  #   - Oct
+  #   - Nov
+  #   - Dec
+  # month_names:
+  #   - January
+  #   - February
+  #   - March
+  #   - April
+  #   - May
+  #   - June
+  #   - July
+  #   - August
+  #   - September
+  #   - October
+  #   - November
+  #   - December
+settings:
+  current_date: '2025-12-27'
+  render_command:
+    design:
+    locale:
+    typst_path: rendercv_output/NAME_IN_SNAKE_CASE_CV.typ
+    pdf_path: rendercv_output/NAME_IN_SNAKE_CASE_CV.pdf
+    markdown_path: rendercv_output/NAME_IN_SNAKE_CASE_CV.md
+    html_path: rendercv_output/NAME_IN_SNAKE_CASE_CV.html
+    png_path: rendercv_output/NAME_IN_SNAKE_CASE_CV.png
+    dont_generate_markdown: true
+    dont_generate_html: true
+    dont_generate_typst: false
+    dont_generate_pdf: false
+    dont_generate_png: true
+  bold_keywords: []

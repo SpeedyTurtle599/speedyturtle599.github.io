@@ -1,0 +1,24 @@
+---
+import ContactForm from '../islands/ContactForm';
+
+interface Props {
+  email: string;
+  phone: string;
+  linkedin: string;
+}
+
+const { email, phone, linkedin } = Astro.props;
+---
+
+<section class="contact section" id="contact">
+  <div class="container container--narrow">
+    <div class="section__header">
+      <h2 class="section__title">Let's Connect</h2>
+      <p class="section__subtitle">
+        Interested in aerospace research, hypersonic systems, or just want to chat?
+      </p>
+    </div>
+    
+    <ContactForm email={email} phone={phone} linkedin={linkedin} client:visible />
+  </div>
+</section>

@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/blocks/Hero.astro';
+import Experience from '../components/blocks/Experience.astro';
+import Projects from '../components/blocks/Projects.astro';
+import Education from '../components/blocks/Education.astro';
+import Skills from '../components/blocks/Skills.astro';
+import Awards from '../components/blocks/Awards.astro';
+import Contact from '../components/blocks/Contact.astro';
+
+import { loadCV, loadPageLayout } from '../utils/dataLoader';
+
+// Load data
+const cv = loadCV();
+const pageLayout = loadPageLayout('index');
+
+// Extract data for each section
+const { name, email, phone, social_networks, sections } = cv;
+const linkedin = social_networks?.[0]?.username || '';
+---
+
+<BaseLayout title={pageLayout.title} description={pageLayout.description}>
+  <Hero 
+    name={name} 
+    taglines={["Aerospace Engineer", "CFD Researcher", "Hypersonic Systems"]} 
+  />
+  
+  <Experience experiences={sections.experience} />
+  
+  <Projects projects={sections.projects} />
+  
+  <Education education={sections.education} />
+  
+  <Skills skills={sections.skills} />
+  
+  <Awards awards={sections.awards_and_certifications} />
+  
+  <Contact email={email} phone={phone} linkedin={linkedin} />
+</BaseLayout>

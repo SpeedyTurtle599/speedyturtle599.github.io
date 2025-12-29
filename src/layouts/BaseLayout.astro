@@ -1,0 +1,70 @@
+---
+import '../styles/global.css';
+import ThemeToggle from '../components/islands/ThemeToggle';
+import Navigation from '../components/islands/Navigation';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Benjamin Coveler - Aerospace Engineer & Researcher" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    
+    <title>{title}</title>
+    
+    <!-- Theme initialization (prevents flash) -->
+    <script is:inline>
+      const theme = localStorage.getItem('theme') || 
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    </script>
+  </head>
+  <body>
+    <Navigation client:load />
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; {new Date().getFullYear()} Benjamin Coveler. Built with Astro.</p>
+      </div>
+    </footer>
+    <ThemeToggle client:load />
+  </body>
+</html>
+
+<style>
+  main {
+    min-height: 100vh;
+  }
+  
+  .site-footer {
+    padding: var(--space-8) 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+  }
+</style>

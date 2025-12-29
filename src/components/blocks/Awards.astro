@@ -1,0 +1,89 @@
+---
+interface Award {
+  label: string;
+  details: string;
+}
+
+interface Props {
+  awards: Award[];
+}
+
+const { awards } = Astro.props;
+---
+
+<section class="awards section">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title">Awards & Certifications</h2>
+      <p class="section__subtitle">
+        Recognitions and professional certifications
+      </p>
+    </div>
+    
+    <div class="awards__grid">
+      {awards.map((award, index) => (
+        <div class="award-card" style={`--index: ${index}`}>
+          <div class="award-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="7"/>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+            </svg>
+          </div>
+          <h3 class="award-card__title">{award.label}</h3>
+          <p class="award-card__details">{award.details}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .awards__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+  }
+  
+  .award-card {
+    text-align: center;
+    padding: var(--space-8) var(--space-6);
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    opacity: 0;
+    animation: slideUp 0.5s ease-out forwards;
+    animation-delay: calc(var(--index) * 0.1s);
+    transition: all 0.3s ease;
+  }
+  
+  .award-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .award-card__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    border-radius: 50%;
+    margin-bottom: var(--space-4);
+  }
+  
+  .award-card__title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--space-2);
+  }
+  
+  .award-card__details {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+</style>

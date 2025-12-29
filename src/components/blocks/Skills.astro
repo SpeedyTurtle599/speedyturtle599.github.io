@@ -1,0 +1,27 @@
+---
+import SkillsGrid from '../islands/SkillsGrid';
+
+interface Skill {
+  label: string;
+  details: string;
+}
+
+interface Props {
+  skills: Skill[];
+}
+
+const { skills } = Astro.props;
+---
+
+<section class="skills section section--alt" id="skills">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title">Skills & Expertise</h2>
+      <p class="section__subtitle">
+        Technical capabilities spanning simulation, programming, and hands-on fabrication
+      </p>
+    </div>
+    
+    <SkillsGrid skills={skills} client:visible />
+  </div>
+</section>

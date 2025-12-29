@@ -1,0 +1,41 @@
+{
+  "title": "Benjamin Coveler | Aerospace Engineer",
+  "description": "PhD researcher specializing in aero-thermo-structural simulation and optimization of hypersonic vehicle systems.",
+  "blocks": [
+    {
+      "type": "hero",
+      "data": "cv.name",
+      "props": {
+        "taglines": ["Aerospace Engineer", "CFD Researcher", "Hypersonic Systems"]
+      }
+    },
+    {
+      "type": "experience",
+      "data": "cv.sections.experience"
+    },
+    {
+      "type": "projects",
+      "data": "cv.sections.projects"
+    },
+    {
+      "type": "education",
+      "data": "cv.sections.education"
+    },
+    {
+      "type": "skills",
+      "data": "cv.sections.skills"
+    },
+    {
+      "type": "awards",
+      "data": "cv.sections.awards_and_certifications"
+    },
+    {
+      "type": "contact",
+      "data": {
+        "email": "cv.email",
+        "phone": "cv.phone",
+        "linkedin": "cv.social_networks[0].username"
+      }
+    }
+  ]
+}
