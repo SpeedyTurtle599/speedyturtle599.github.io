@@ -8,11 +8,18 @@ import Skills from '../components/blocks/Skills.astro';
 import Awards from '../components/blocks/Awards.astro';
 import Contact from '../components/blocks/Contact.astro';
 
-import { loadCV, loadPageLayout } from '../utils/dataLoader';
+import { getEntry } from 'astro:content';
 
-// Load data
-const cv = loadCV();
-const pageLayout = loadPageLayout('index');
+// Load data from content collections
+const cvEntry = await getEntry('cv', 'benjamin');
+const pageEntry = await getEntry('pages', 'index');
+
+if (!cvEntry || !pageEntry) {
+  throw new Error('Required content not found');
+}
+
+const cv = cvEntry.data;
+const pageLayout = pageEntry.data;
 
 // Extract data for each section
 const { name, social_networks, sections } = cv;
