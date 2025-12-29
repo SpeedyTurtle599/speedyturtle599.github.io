@@ -2,12 +2,10 @@
 import ContactForm from '../islands/ContactForm';
 
 interface Props {
-  email: string;
-  phone: string;
   linkedin: string;
 }
 
-const { email, phone, linkedin } = Astro.props;
+const { linkedin } = Astro.props;
 ---
 
 <section class="contact section" id="contact">
@@ -19,6 +17,6 @@ const { email, phone, linkedin } = Astro.props;
       </p>
     </div>
     
-    <ContactForm email={email} phone={phone} linkedin={linkedin} client:visible />
+    <ContactForm linkedin={linkedin} client:visible />
   </div>
 </section>

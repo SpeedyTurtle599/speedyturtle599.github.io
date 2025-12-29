@@ -15,7 +15,7 @@ const cv = loadCV();
 const pageLayout = loadPageLayout('index');
 
 // Extract data for each section
-const { name, email, phone, social_networks, sections } = cv;
+const { name, social_networks, sections } = cv;
 const linkedin = social_networks?.[0]?.username || '';
 ---
 
@@ -35,5 +35,5 @@ const linkedin = social_networks?.[0]?.username || '';
   
   <Awards awards={sections.awards_and_certifications} />
   
-  <Contact email={email} phone={phone} linkedin={linkedin} />
+  <Contact linkedin={linkedin} />
 </BaseLayout>
